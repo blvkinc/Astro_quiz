@@ -86,70 +86,70 @@ window.addEventListener("DOMContentLoaded", function () {
   var r3q1 = document.getElementById("r3q1");
   if (r3q1) {
     r3q1.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q1.html";
+      window.location.href = "Questions/round3/q (1).html";
     });
   }
 
   var r3q2 = document.getElementById("r3q2");
   if (r3q2) {
     r3q2.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q2.html";
+      window.location.href = "Questions/round3/q (2).html";
     });
   }
 
   var r3q3 = document.getElementById("r3q3");
   if (r3q3) {
     r3q3.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q3.html";
+      window.location.href = "Questions/round3/q (3).html";
     });
   }
 
   var r3q4 = document.getElementById("r3q4");
   if (r3q4) {
     r3q4.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q4.html";
+      window.location.href = "Questions/round3/q (4).html";
     });
   }
 
   var r3q5 = document.getElementById("r3q5");
   if (r3q5) {
     r3q5.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q5.html";
+      window.location.href = "Questions/round3/q (5).html";
     });
   }
 
   var r3q6 = document.getElementById("r3q6");
   if (r3q6) {
     r3q6.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q6.html";
+      window.location.href = "Questions/round3/q (6).html";
     });
   }
 
   var r3q7 = document.getElementById("r3q7");
   if (r3q7) {
     r3q7.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q7.html";
+      window.location.href = "Questions/round3/q (7).html";
     });
   }
 
   var r3q8 = document.getElementById("r3q8");
   if (r3q8) {
     r3q8.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q8.html";
+      window.location.href = "Questions/round3/q (8).html";
     });
   }
 
   var r3q9 = document.getElementById("r3q9");
   if (r3q9) {
     r3q9.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q9.html";
+      window.location.href = "Questions/round3/q (9).html";
     });
   }
 
   var r3q10 = document.getElementById("r3q10");
   if (r3q10) {
     r3q10.addEventListener("click", function () {
-      window.location.href = "Questions/round3/q10.html";
+      window.location.href = "Questions/round3/q (10).html";
     });
   }
 });
