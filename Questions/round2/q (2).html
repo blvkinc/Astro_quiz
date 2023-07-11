@@ -21,6 +21,12 @@
         text-align: center;
         margin-bottom: 2rem;
       }
+      .answersText {
+        color: white;
+
+        margin-bottom: 2rem;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -35,9 +41,44 @@
           recession velocity of the galaxy in km/s.
         </p>
       </div>
+      <div class="answersText" id="answersText">
+        Answer: The redshift (z) of a galaxy is related to its recession
+        velocity (v) through Hubble's law:
+        <br /><br />
+        v = H0d,
+        <br /><br />
+        where H0 is the Hubble constant and d is the distance to the galaxy.
+        <br /><br />
+        The relation between redshift and distance is given by:
+        <br /><br />
+        z = Δλ/λ,
+        <br /><br />
+        where Δλ is the observed shift in wavelength and λ is the rest
+        wavelength.
+        <br /><br />
+        By rearranging the equation, we can express the recession velocity in
+        terms of the redshift:
+        <br /><br />
+        v = c × z,
+        <br /><br />
+        where c is the speed of light.
+        <br /><br />
+        Substituting the given redshift value (z = 0.5) and the speed of light,
+        we can calculate the recession velocity of the galaxy in km/s.
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round2.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answersText");
+        correctAnswer.style.display = "block";
+      }
+    </script>
   </body>
 </html>

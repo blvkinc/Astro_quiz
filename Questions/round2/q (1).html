@@ -21,6 +21,11 @@
         text-align: center;
         margin-bottom: 2rem;
       }
+      .answersText {
+        color: white;
+        margin-bottom: 2rem;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -36,9 +41,35 @@
           temperature of the star.
         </p>
       </div>
+
+      <div class="answersText" id="answersText">
+        Answer: To calculate the surface temperature of the star, we can use the
+        Stefan-Boltzmann law, which relates the luminosity of a blackbody to its
+        surface temperature. The Stefan-Boltzmann law is given by:
+        <br /><br />L = 4πR^2σT^4,<br /><br />
+        where L is the luminosity, R is the radius, σ is the Stefan-Boltzmann
+        constant, and T is the surface temperature. <br /><br />We know that the
+        luminosity of the star is given by: <br /><br />L = 4πR^2σT^4.<br /><br />
+        Substituting the given values of mass (M) and radius (R) of the star, we
+        can use the mass-luminosity relation for main sequence stars:
+        <br /><br />L = L☉(M/M☉)^3.5, <br /><br />where L☉ is the luminosity of
+        the Sun and M☉ is the mass of the Sun. <br /><br />By substituting the
+        values and solving the equations, we can find the surface temperature of
+        the star.
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round2.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answersText");
+        correctAnswer.style.display = "block";
+      }
+    </script>
   </body>
 </html>
