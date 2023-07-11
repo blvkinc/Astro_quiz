@@ -35,9 +35,30 @@
           explain the nature of dark matter?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">
+          a) WIMP (Weakly Interacting Massive Particle)
+        </div>
+        <div id="answer2" class="answer">
+          b) MACHO (Massive Compact Halo Object)
+        </div>
+        <div id="answer3" class="answer">c) Axion</div>
+        <div id="answer4" class="answer">d) Graviton</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round1.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer3");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>

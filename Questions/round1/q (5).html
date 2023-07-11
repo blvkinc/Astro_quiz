@@ -35,9 +35,26 @@
           that emits both gravitational waves and electromagnetic radiation?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">a) Pulsar</div>
+        <div id="answer2" class="answer">b) Gamma-ray burst</div>
+        <div id="answer3" class="answer">c) Neutrino burst</div>
+        <div id="answer4" class="answer">d) Dark matter halo</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round1.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer2");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>
