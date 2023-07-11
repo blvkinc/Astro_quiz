@@ -35,9 +35,26 @@
           fundamental forces, including gravity?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">a) String theory</div>
+        <div id="answer2" class="answer">b) Loop quantum gravity</div>
+        <div id="answer3" class="answer">c) Supersymmetry</div>
+        <div id="answer4" class="answer">d) Grand Unified Theory (GUT)</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round3.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer1");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>

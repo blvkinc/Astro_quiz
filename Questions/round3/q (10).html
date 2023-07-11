@@ -36,9 +36,26 @@
           universe?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">a) Dark energy</div>
+        <div id="answer2" class="answer">b) Dark matter</div>
+        <div id="answer3" class="answer">c) Neutrinos</div>
+        <div id="answer4" class="answer">d) Exotic matter</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round3.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer2");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>

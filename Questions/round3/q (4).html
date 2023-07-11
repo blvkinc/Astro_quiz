@@ -35,9 +35,26 @@
           of a black hole, beyond which information is lost?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">a) Event horizon</div>
+        <div id="answer2" class="answer">b) Cauchy horizon</div>
+        <div id="answer3" class="answer">c) Firewall</div>
+        <div id="answer4" class="answer">d) Planck wall</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round3.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer3");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>

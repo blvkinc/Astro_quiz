@@ -35,9 +35,32 @@
           which of the following observations?
         </p>
       </div>
+      <div class="answers">
+        <div id="answer1" class="answer">
+          a) The flatness and isotropy of the universe
+        </div>
+        <div id="answer2" class="answer">b) The existence of dark matter</div>
+        <div id="answer3" class="answer">
+          c) The formation of supermassive black holes
+        </div>
+        <div id="answer4" class="answer">
+          d) The origin of primordial nucleosynthesis
+        </div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
         <a href="../../round3.html">back</a>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer1");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
   </body>
 </html>
