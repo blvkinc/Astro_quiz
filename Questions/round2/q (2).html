@@ -1,40 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Round 1 - Question 1</title>
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="../../styles.css">
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  <head>
+    <title>Round 2 - Question 2</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
-    .question-heading {
-      margin-bottom: 1rem;
-    }
+      .question-heading {
+        margin-bottom: 1rem;
+      }
 
-    .question-text {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="question-heading">
-      <h4><sup>Round 1 |</sup></h4>
-      <h1><sub>Question 1:</sub></h1>
+      .question-text {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .answersText {
+        color: white;
+
+        margin-bottom: 2rem;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="question-heading">
+        <div id="timer">20:00</div>
+        <div id="popup" class="popup" style="display: none">
+          <h2>Time's Up!</h2>
+        </div>
+        <h4><sup>Round 2 |</sup></h4>
+        <h1><sub>Question 2:</sub></h1>
+      </div>
+      <div class="question-text">
+        <p>
+          Determine the change in luminosity of the Sun as it transitions from
+          burning hydrogen to burning helium
+        </p>
+      </div>
+      <div class="answersText" id="answersText">
+        To determine the change in luminosity of the Sun as it transitions from
+        burning hydrogen to burning helium, we can use the Stefan-Boltzmann law,
+        which relates the luminosity of a star to its surface temperature and
+        radius. The Stefan-Boltzmann law is given by:
+        <br /><br />
+        L = 4πR^2σT^4
+        <br /><br />
+        Where:<br /><br />
+        L = Luminosity<br /><br />
+        R = Radius of the star<br /><br />
+        σ = Stefan-Boltzmann constant<br /><br />
+        T = Surface temperature of the star<br /><br />
+
+        We are given the initial values for the Sun's surface temperature (T1 =
+        5780 K) and radius (R1 = 6.96 × 10^8 m) when it is burning hydrogen. We
+        need to calculate the final values for the Sun's surface temperature (T2
+        = 3160 K) and radius (R2 = 1.26 × 10^11 m) when it is burning helium.
+        <br /><br />
+        First, let's calculate the initial luminosity (L1) of the Sun when
+        burning hydrogen:
+        <br /><br />
+        L1 = 4πR1^2σT1^4
+        <br /><br />
+        Now, let's calculate the final luminosity (L2) of the Sun when burning
+        helium:
+        <br /><br />
+        L2 = 4πR2^2σT2^4
+        <br /><br />
+        Finally, we can calculate the factor by which the luminosity of the Sun
+        increases:
+        <br /><br />
+        Factor = L2 / L1
+        <br /><br />
+        Let's plug in the values and calculate:
+        <br /><br />
+        L1 = 4π(6.96 × 10^8)^2σ(5780^4)<br /><br />
+        L2 = 4π(1.26 × 10^11)^2σ(3160^4)
+        <br /><br />
+        Factor = L2 / L1
+        <br /><br />
+        After performing the calculations, we find that the factor by which the
+        luminosity of the Sun increases is approximately 2987. Therefore, the
+        luminosity of the Sun will increase by a factor of about 3000 due to the
+        changes in surface temperature and radius when it transitions to burning
+        helium.
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
+      <div class="button-container">
+        <a href="../../round2.html">back</a>
+      </div>
     </div>
-    <div class="question-text">
-      <p>The modified code, the card 1 has been given an id attribute of "card1". The JavaScript code uses getElementById() to select the card element and adds an event listener to it. When card 1 is clicked, the window.location.href is set to "q1.html", which will navigate to the q1.html page.</p>
-    </div>
-    <div class="button-container">
-      <a href="../../round2.html">back</a>
-    </div>
-  </div>
-</body>
+    <script>
+      var timeLeft = 20 * 60;
+      var timerElement = document.getElementById("timer");
+      function updateTimer() {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+        var formattedTime =
+          ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
+        timerElement.textContent = formattedTime;
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          timerElement.style.display = "none";
+          var popup = document.getElementById("popup");
+          popup.style.display = "block";
+        }
+      }
+      updateTimer();
+      var timerInterval = setInterval(updateTimer, 1000);
+
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answersText");
+        correctAnswer.style.display = "block";
+      }
+    </script>
+  </body>
 </html>

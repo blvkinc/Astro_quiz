@@ -1,40 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Round 1 - Question 1</title>
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="../../styles.css">
-  <style>
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  <head>
+    <title>Round 1 - Question 5</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+      }
 
-    .question-heading {
-      margin-bottom: 1rem;
-    }
+      .question-heading {
+        margin-bottom: 1rem;
+      }
 
-    .question-text {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="question-heading">
-      <h4><sup>Round 1 |</sup></h4>
-      <h1><sub>Question 1:</sub></h1>
+      .question-text {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="question-heading">
+        <div id="timer">00:25</div>
+        <div id="popup" class="popup" style="display: none">
+          <h2>Time's Up!</h2>
+        </div>
+        <h4><sup>Round 1 |</sup></h4>
+        <h1><sub>Question 5:</sub></h1>
+      </div>
+      <div class="question-text">
+        <p>
+          Which of the following is an example of an astronomical phenomenon
+          that emits both gravitational waves and electromagnetic radiation?
+        </p>
+      </div>
+      <div class="answers">
+        <div id="answer1" class="answer">a) Pulsar</div>
+        <div id="answer2" class="answer">b) Gamma-ray burst</div>
+        <div id="answer3" class="answer">c) Neutrino burst</div>
+        <div id="answer4" class="answer">d) Dark matter halo</div>
+      </div>
+      <button id="showAnswerButton">Show Answer</button>
+      <div class="button-container">
+        <a href="../../round1.html">back</a>
+      </div>
     </div>
-    <div class="question-text">
-      <p>The modified code, the card 1 has been given an id attribute of "card1". The JavaScript code uses getElementById() to select the card element and adds an event listener to it. When card 1 is clicked, the window.location.href is set to "q1.html", which will navigate to the q1.html page.</p>
-    </div>
-    <div class="button-container">
-      <a href="../../round1.html">back</a>
-    </div>
-  </div>
-</body>
+    <script>
+      var timeLeft = 25;
+      var timerElement = document.getElementById("timer");
+      function updateTimer() {
+        var minutes = Math.floor(timeLeft / 60);
+        var seconds = timeLeft % 60;
+        var formattedTime =
+          ("0" + minutes).slice(-2) + ":" + ("0" + seconds).slice(-2);
+        timerElement.textContent = formattedTime;
+        timeLeft--;
+        if (timeLeft < 0) {
+          clearInterval(timerInterval);
+          timerElement.style.display = "none";
+          var popup = document.getElementById("popup");
+          popup.style.display = "block";
+        }
+      }
+      updateTimer();
+      var timerInterval = setInterval(updateTimer, 1000);
+
+      document
+        .getElementById("showAnswerButton")
+        .addEventListener("click", showAnswer);
+      function showAnswer() {
+        var correctAnswer = document.getElementById("answer2");
+        correctAnswer.style.border = "2px solid green";
+        correctAnswer.style.padding = "5px";
+      }
+    </script>
+  </body>
 </html>
