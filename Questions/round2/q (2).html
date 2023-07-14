@@ -41,34 +41,56 @@
       </div>
       <div class="question-text">
         <p>
-          A galaxy is observed to have a redshift of z = 0.5. Calculate the
-          recession velocity of the galaxy in km/s.
+          Determine the change in luminosity of the Sun as it transitions from
+          burning hydrogen to burning helium
         </p>
       </div>
       <div class="answersText" id="answersText">
-        Answer: The redshift (z) of a galaxy is related to its recession
-        velocity (v) through Hubble's law:
+        To determine the change in luminosity of the Sun as it transitions from
+        burning hydrogen to burning helium, we can use the Stefan-Boltzmann law,
+        which relates the luminosity of a star to its surface temperature and
+        radius. The Stefan-Boltzmann law is given by:
         <br /><br />
-        v = H0d,
+        L = 4πR^2σT^4
         <br /><br />
-        where H0 is the Hubble constant and d is the distance to the galaxy.
+        Where:<br /><br />
+        L = Luminosity<br /><br />
+        R = Radius of the star<br /><br />
+        σ = Stefan-Boltzmann constant<br /><br />
+        T = Surface temperature of the star<br /><br />
+
+        We are given the initial values for the Sun's surface temperature (T1 =
+        5780 K) and radius (R1 = 6.96 × 10^8 m) when it is burning hydrogen. We
+        need to calculate the final values for the Sun's surface temperature (T2
+        = 3160 K) and radius (R2 = 1.26 × 10^11 m) when it is burning helium.
         <br /><br />
-        The relation between redshift and distance is given by:
+        First, let's calculate the initial luminosity (L1) of the Sun when
+        burning hydrogen:
         <br /><br />
-        z = Δλ/λ,
+        L1 = 4πR1^2σT1^4
         <br /><br />
-        where Δλ is the observed shift in wavelength and λ is the rest
-        wavelength.
+        Now, let's calculate the final luminosity (L2) of the Sun when burning
+        helium:
         <br /><br />
-        By rearranging the equation, we can express the recession velocity in
-        terms of the redshift:
+        L2 = 4πR2^2σT2^4
         <br /><br />
-        v = c × z,
+        Finally, we can calculate the factor by which the luminosity of the Sun
+        increases:
         <br /><br />
-        where c is the speed of light.
+        Factor = L2 / L1
         <br /><br />
-        Substituting the given redshift value (z = 0.5) and the speed of light,
-        we can calculate the recession velocity of the galaxy in km/s.
+        Let's plug in the values and calculate:
+        <br /><br />
+        L1 = 4π(6.96 × 10^8)^2σ(5780^4)<br /><br />
+        L2 = 4π(1.26 × 10^11)^2σ(3160^4)
+        <br /><br />
+        Factor = L2 / L1
+        <br /><br />
+        After performing the calculations, we find that the factor by which the
+        luminosity of the Sun increases is approximately 2987. Therefore, the
+        luminosity of the Sun will increase by a factor of about 3000 due to the
+        changes in surface temperature and radius when it transitions to burning
+        helium.
       </div>
       <button id="showAnswerButton">Show Answer</button>
       <div class="button-container">
