@@ -33,7 +33,6 @@ body {
 
 #timer {
   position: absolute;
-
   right: 10px;
   font-size: 50px;
   color: #fff;
@@ -225,6 +224,7 @@ a {
 .button-container a:hover {
   background-color: #5ddcff;
 }
+
 #showAnswerButton {
   text-decoration: none;
   padding: 10px 20px;
@@ -233,7 +233,9 @@ a {
   border-radius: 4px;
   font-family: "Roboto", sans-serif;
   margin: 0 10px;
+  transition: background-color 0.3s;
 }
+
 #showAnswerButton:hover {
   background-color: #5ddcff;
 }
@@ -256,7 +258,7 @@ h1 {
 }
 h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 2em;
   color: #fff;
 }
 p {
